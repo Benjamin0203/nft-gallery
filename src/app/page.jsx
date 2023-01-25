@@ -2,10 +2,11 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from './page.module.css'
-import Intro from '../../components/Intro'
 import { GlobalStyles } from '../../components/shared/GlobalStyles';
+import Intro from '../../components/Intro'
+import About from '../../components/About'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
     <main className={styles.main}>
       <div style={{ marginTop: "5rem" }}>
         <Intro />
+        <About />
       </div>
     </main>
     </>
