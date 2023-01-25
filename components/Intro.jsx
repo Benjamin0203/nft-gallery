@@ -95,7 +95,6 @@ export default function Intro() {
       <Container>
       <Title>NFT Gallery</Title>   
       <Fade>
-        <p>I will gently appear as I enter the viewport</p>
         <Carousel />
       </Fade>
       <Description>

@@ -65,8 +65,8 @@ export default function Carousel() {
         <SwiperSlide key={index}>
           <Image
             src={`/space${index + 1}.jpg`}
-            width={500}
-            height={500}
+            width={300}
+            height={300}
             draggable={false}
             style={{ userSelect: "none", objectFit:'cover', layout:'responsive'}}
             alt='spaceNFT'
