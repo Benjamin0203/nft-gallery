@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import ButtonGradient from "./shared/ButtonGradient";
+import Container from "./shared/Container";
+import Carousel from "./Carousel";
 
 const Title = styled.h1`
 color: var(--color-black);
@@ -21,6 +23,7 @@ const Description = styled.p`
   align-self: center;
 `;
 
+
 const Button = styled(ButtonGradient)`
 align-self: center;
 margin-bottom: 5rem;
@@ -29,15 +32,18 @@ margin-bottom: 5rem;
 export default function Intro() {
   return (
     <section id="#">
+      <Container>
       <Title>NFT Gallery</Title>   
       <Fade>
         <p>I will gently appear as I enter the viewport</p>
+        <Carousel />
       </Fade>
       <Description>
         This is a test description
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint qui ab consequuntur eius inventore officiis minima, aliquam excepturi doloribus non quod quis, voluptatum a culpa quisquam maiores quas libero impedit?
       </Description>
       <Button>Purchase NFT</Button>
+      </Container>
     </section>
   );
 }
