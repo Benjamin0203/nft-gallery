@@ -22,20 +22,20 @@ const Divisive = styled.div`
   .line {
     width: 100%;
     height: 1px;
-    background-color: var(--color-red-100);
+    background-color: var(--color-purple-100);
   }
   .circle {
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    outline: 2px solid var(--color-red-100);
+    outline: 2px solid var(--color-purple-100);
     flex-shrink: 0;
   }
   .center {
     width: 8rem;
     height: 0.5rem;
     border-radius: 12px;
-    outline: 2px solid var(--color-red-100);
+    outline: 2px solid var(--color-purple-100);
     flex-shrink: 0;
   }
 `;
@@ -50,7 +50,7 @@ const Title = styled.h1`
   }
 `;
 
-export default function Section({ 
+const Section = ({
   id,
   children,
   title,
@@ -59,21 +59,31 @@ export default function Section({
   mb,
   ml,
   mr,
-  divisiveDisplay,}){
+  divisiveDisplay,
+}) => {
   return (
     <>
-    <Divisive divisiveDisplay={divisiveDisplay}>
-      <div className="line" />
-      <div className="circle" />
-      <div className="center" />
-      <div className="line" />
-    </Divisive>
-    <Container>
-      <Wrapper id={id} gap={gap} mt={mt} mb={mb} ml={ml} mr={mr}>
-        <Title>{title}</Title>
-        {children}
-      </Wrapper>
-    </Container>
+      <Divisive divisiveDisplay={divisiveDisplay}>
+        <div className='line' />
+        <div className='circle' />
+        <div className='center' />
+        <div className='circle' />
+        <div className='line' />
+      </Divisive>
+      <Container>
+        <Wrapper id={id} gap={gap} mt={mt} mb={mb} ml={ml} mr={mr}>
+          <Title>{title}</Title>
+          {children}
+        </Wrapper>
+      </Container>
     </>
-  )
+  );
 };
+
+Section.defaultProps = {
+  title: "Section Title",
+  id: "#",
+  children: "Content Here",
+};
+
+export default Section;

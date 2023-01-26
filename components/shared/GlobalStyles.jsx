@@ -52,7 +52,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 body {
-    background: var(--color-offWhite);
+    background: var(--color-black);
     overflow-x: hidden;
 }
 
