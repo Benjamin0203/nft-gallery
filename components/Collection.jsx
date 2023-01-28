@@ -25,12 +25,13 @@ export default function Collection() {
         src="/space1.jpg"
         width={280}
         height={280}
+        alt=""
         />
         <Image
         src="/space1.jpg"
         width={280}
         height={280}
-        
+        alt=""
         />
         </ImageContainer>
       <ImageContainer>
@@ -38,6 +39,7 @@ export default function Collection() {
         src="/space1.jpg"
         width={280}
         height={280}
+        alt=""
         />
         </ImageContainer>
       </Section>
