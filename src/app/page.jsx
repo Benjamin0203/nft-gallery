@@ -5,6 +5,7 @@ import styles from './page.module.css'
 import { GlobalStyles } from '../../components/shared/GlobalStyles';
 import Intro from '../../components/Intro'
 import About from '../../components/About'
+import Contact from '../../components/Contact';
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +17,7 @@ export default function Home() {
       <div style={{ marginTop: "5rem" }}>
         <Intro />
         <About />
+        <Contact />
       </div>
     </main>
     </>
