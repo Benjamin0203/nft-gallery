@@ -50,17 +50,17 @@ const Title = styled.h1`
   }
 `;
 
-const Section = ({
-  id,
-  children,
-  title,
+export default function Section ({
+  id="#",
+  children="Content Here",
+  title="Section Title",
   gap,
   mt,
   mb,
   ml,
   mr,
   divisiveDisplay,
-}) => {
+}) {
   return (
     <>
       <Divisive divisiveDisplay={divisiveDisplay}>
@@ -80,10 +80,3 @@ const Section = ({
   );
 };
 
-Section.defaultProps = {
-  title: "Section Title",
-  id: "#",
-  children: "Content Here",
-};
-
-export default Section;
