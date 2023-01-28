@@ -19,25 +19,25 @@ const Divisive = styled.div`
   align-items: center;
   gap: 1.5rem;
   margin: 5rem 0;
-  .line {
-    width: 100%;
-    height: 1px;
-    background-color: var(--color-purple-100);
-  }
-  .circle {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    outline: 2px solid var(--color-purple-100);
-    flex-shrink: 0;
-  }
-  .center {
-    width: 8rem;
-    height: 0.5rem;
-    border-radius: 12px;
-    outline: 2px solid var(--color-purple-100);
-    flex-shrink: 0;
-  }
+  // .line {
+  //   width: 100%;
+  //   height: 1px;
+  //   background-color: var(--color-purple-100);
+  // }
+  // .circle {
+  //   width: 0.5rem;
+  //   height: 0.5rem;
+  //   border-radius: 50%;
+  //   outline: 2px solid var(--color-purple-100);
+  //   flex-shrink: 0;
+  // }
+  // .center {
+  //   width: 8rem;
+  //   height: 0.5rem;
+  //   border-radius: 12px;
+  //   outline: 2px solid var(--color-purple-100);
+  //   flex-shrink: 0;
+  // }
 `;
 const Title = styled.h1`
   font-size: 3.5rem;
@@ -64,11 +64,11 @@ const Section = ({
   return (
     <>
       <Divisive divisiveDisplay={divisiveDisplay}>
-        <div className='line' />
+        {/* <div className='line' />
         <div className='circle' />
         <div className='center' />
         <div className='circle' />
-        <div className='line' />
+        <div className='line' /> */}
       </Divisive>
       <Container>
         <Wrapper id={id} gap={gap} mt={mt} mb={mb} ml={ml} mr={mr}>
