@@ -25,6 +25,7 @@ const FormGroup = styled.form`
 const Button = styled(ButtonGradient)`
   align-self: center;
   margin-bottom: 5rem;
+  width: 15rem;
   `;
 
 export default function Contact() {
