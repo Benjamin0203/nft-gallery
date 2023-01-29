@@ -6,6 +6,7 @@ import ButtonGradient from "./shared/ButtonGradient";
 import FormElement from "./shared/FormElement";
 
 //formspree endpoint: https://formspree.io/forms/xrgveqov/submissions
+//contact info
 import { useForm, ValidationError } from "@formspree/react"
 
 
