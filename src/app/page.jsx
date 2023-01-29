@@ -7,6 +7,7 @@ import Intro from '../../components/Intro';
 import About from '../../components/About';
 import Collection from '../../components/Collection';
 
+
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
       <div style={{ marginTop: "5rem" }}>
         <Intro />
         <About />
-        <Collection />
+        <Contact />
       </div>
     </main>
     </>
