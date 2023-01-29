@@ -15,6 +15,11 @@ const FormGroup = styled.form`
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 2rem;
+  padding: 0 5rem;
+  @media screen and (min-width: 1550px) {
+    max-width: 1550px;
+    margin: 0 auto;
+  }
 `;
 
 const Button = styled(ButtonGradient)`

@@ -12,7 +12,7 @@ const Input = styled.input`
   height: 3rem;
   padding: 0.5rem 1rem;
   border: 1px solid var(--color-gray);
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   outline: none;
   font-size: 1.5rem;
   color: var(--color-gray);
