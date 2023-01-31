@@ -1,17 +1,17 @@
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
-import ButtonGradient from "./shared/ButtonGradient";
-import Container from "./shared/Container";
-import Carousel from "./Carousel";
-import OutlineText from "./shared/OutlineText";
+import ButtonGradient from "../../components/shared/ButtonGradient";
+import Container from "../../components/shared/Container";
+import Carousel from "../../components/Carousel";
+import OutlineText from "../../components/shared/OutlineText";
 
 const Title = styled.h1`
-color: var(--color-black);
-font-family: system-ui;
-font-size: 4rem;
-font-weight: 500;
-text-align: center;
-text-shadow: 2px 2px var(--color-seaGreen);
+  color: var(--color-black);
+  font-family: system-ui;
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 2px 2px var(--color-seaGreen);
 `;
 
 const Description = styled.p`
@@ -85,37 +85,39 @@ const Line = styled.div`
 `;
 
 const Button = styled(ButtonGradient)`
-align-self: center;
-margin-bottom: 5rem;
-`
+  align-self: center;
+  margin-bottom: 5rem;
+`;
 
 export default function Intro() {
   return (
     <section id="#">
       <Container>
-      <Title>NFT Gallery</Title>   
-      <Fade>
-        <Carousel />
-      </Fade>
-      <Description>
-        This is a test description
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint qui ab consequuntur eius inventore officiis minima, aliquam excepturi doloribus non quod quis, voluptatum a culpa quisquam maiores quas libero impedit?
-      </Description>
-      <Button>Purchase NFT</Button>
+        <Title>NFT Gallery</Title>
+        <Fade>
+          <Carousel />
+        </Fade>
+        <Description>
+          This is a test description Lorem, ipsum dolor sit amet consectetur
+          adipisicing elit. Sint qui ab consequuntur eius inventore officiis
+          minima, aliquam excepturi doloribus non quod quis, voluptatum a culpa
+          quisquam maiores quas libero impedit?
+        </Description>
+        <Button>Purchase NFT</Button>
       </Container>
 
       <InfoContainer>
-      <InfoInner>
+        <InfoInner>
           <Fade cascade damping={0.1}>
             <Info>
-              <div className='container'>
+              <div className="container">
                 <BigText>600</BigText>
                 <SmallText>Total NFTs</SmallText>
               </div>
             </Info>
             <Line />
             <Info>
-              <div className='container'>
+              <div className="container">
                 <BigText>465</BigText>
                 <SmallText>Total Owners</SmallText>
               </div>
@@ -123,7 +125,7 @@ export default function Intro() {
             <Line hideOnMobile />
 
             <Info>
-              <div className='container'>
+              <div className="container">
                 <BigText>2.4</BigText>
                 <SmallText>{`Floor Price (ETH)`}</SmallText>
               </div>
@@ -131,7 +133,7 @@ export default function Intro() {
             <Line />
 
             <Info>
-              <div className='container'>
+              <div className="container">
                 <BigText>112k+</BigText>
                 <SmallText>{`Volume Traded (ETH)`}</SmallText>
               </div>
