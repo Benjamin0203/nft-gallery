@@ -282,7 +282,7 @@ const Navbar = () => {
           </NavMobile>
           {/* MISC */}
           <div>
-            <Paragraph>{`Copyright 2022 - Coded by WebDesignTuts `}</Paragraph>
+            <Paragraph>{`Copyright 2023 - Benjamin Meng `}</Paragraph>
             <IconBox>
               <Link href="">
                 <IconContainer>
