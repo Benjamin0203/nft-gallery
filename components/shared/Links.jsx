@@ -69,21 +69,15 @@ const Links = ({ col, gap, align, justify, onClick }) => {
         </Link>
       </li>
       <li onClick={onClick}>
-        <Link href="/about">
-          <StyledLink>About</StyledLink>
-        </Link>
-      </li>
-
-      {/* <li onClick={onClick}>
-        <Link href='about'>
+        <Link href="#about">
           <StyledLink>About</StyledLink>
         </Link>
       </li>
       <li onClick={onClick}>
-        <Link href='contact'>
+        <Link href='#contact'>
           <StyledLink>Contact</StyledLink>
         </Link>
-      </li> */}
+      </li> 
     </List>
   );
 };

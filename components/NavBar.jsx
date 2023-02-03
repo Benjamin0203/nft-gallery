@@ -231,7 +231,7 @@ const Navbar = () => {
             <FaBars size={20} />
           </SvgButton>
           <Link href="#">
-            <a className="logo">SPACEVERSE</a>
+            <a className="logo">NFT Gallery</a>
           </Link>
         </LogoContainer>
         <Navigation>
