@@ -254,7 +254,7 @@ const Navbar = () => {
         <NavMobileInner>
           {/* BUTTON - LINKS */}
           <div>
-            <Link href="#">
+            <Link href="https://opensea.io/" passHref={true} target="_blank">
               <NavMobileBtn as="a" mb="1.5rem" onClick={closeNavbarMobile}>
                 <SvgButton>
                   <GiSailboat size={20} />
@@ -262,7 +262,8 @@ const Navbar = () => {
                 <span>OPENSEA</span>
               </NavMobileBtn>
             </Link>
-            <Link href="#">
+         
+            <Link href="https://discord.gg/opensea" passHref={true}>
               <NavMobileBtn as="a" onClick={closeNavbarMobile}>
                 <SvgButton>
                   <FaDiscord size={20} />
