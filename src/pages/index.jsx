@@ -6,6 +6,7 @@ import Head from "next/head";
 import { GlobalStyles } from "../../components/shared/GlobalStyles";
 import Intro from "../pages/Intro";
 import About from "../pages/About";
+import Collection from "../pages/Collection";
 import Contact from "../pages/Contact";
 import PageLayout from "components/PageLayout";
 import Link from "next/link";
@@ -23,6 +24,7 @@ export default function Home() {
 
         <div style={{ marginTop: "5rem" }}>
           <Intro />
+          <Collection />
           <About />
           <Contact />
         </div>

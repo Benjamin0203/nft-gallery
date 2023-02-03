@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { FaBars, FaTimes, FaDiscord } from "react-icons/fa";
 import { GiSailboat } from "react-icons/gi";
-import { SiBuymeacoffee } from "react-icons/si";
-import { RiYoutubeLine } from "react-icons/ri";
+import { AiFillGithub } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import SvgButton from "./shared/SvgButton";
@@ -285,16 +285,17 @@ const Navbar = () => {
           <div>
             <Paragraph>{`Copyright 2023 - Benjamin Meng `}</Paragraph>
             <IconBox>
-              <Link href="">
+              <Link href="https://github.com/Benjamin0203" passHref>
                 <IconContainer>
-                  <SiBuymeacoffee size={17} />
+                  <AiFillGithub size={20} />
+                  </IconContainer>
+              </Link>
+              <Link href="https://www.linkedin.com/in/benjaminmeng0203/" passHref>
+                <IconContainer>
+                  <FaLinkedin size={20} />
                 </IconContainer>
               </Link>
-              <Link href="">
-                <IconContainer>
-                  <RiYoutubeLine size={21} />
-                </IconContainer>
-              </Link>
+           
             </IconBox>
           </div>
         </NavMobileInner>
