@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true,
+    appDir: 'src',
+    newNextLinkBehavior: false,
   },
 }
 
