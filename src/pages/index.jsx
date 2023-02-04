@@ -11,6 +11,7 @@ import Contact from "../pages/Contact";
 import PageLayout from "components/PageLayout";
 import Link from "next/link";
 
+
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {

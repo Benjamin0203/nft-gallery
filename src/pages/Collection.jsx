@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import ButtonGradient from "../../components/shared/ButtonGradient";
 import Section from "../../components/shared/Section";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
+import { useNfts } from "@/hooks";
+import { getNfts } from "@/utils";
+
 
 const ImagesContainer = styled.div`
   display: flex;
@@ -82,12 +85,24 @@ const ImageContainer = ({ children, sm, alignEnd }) => {
 // const TestImage = motion(Image)
 
 export default function Collection() {
+  const [walletAddress, setWalletAddress] = useState(
+    '0xe4bBCbFf51e61D0D95FcC5016609aC8354B177C4'
+  );
+  const { nfts, loading, error } = useNfts(walletAddress);
+  
+  useEffect(() => {
+    (async () => {
+      const { nfts } = await getNfts(walletAddress);
+      console.log({ nfts });
+    })();
+  }, [walletAddress]);
+  
   return (
+    <>
+    
     <Section title='OUR COLLECTION' id='collection'>
-      {/* <TestImage src='/space1.jpg' width={200} height={200} whileHover={{
-          scale: 2,
-          transition: { duration: 0.2 }
-        }}/> */}
+      {/* <NftPuller /> */}
+   
     <Fade cascade damping={0.1}>
       {/* COL-1 */}
 
@@ -174,6 +189,7 @@ export default function Collection() {
     </Paragraph>
     <Button>SEE ALL</Button>
   </Section>
+  </>
   )
 
 }
