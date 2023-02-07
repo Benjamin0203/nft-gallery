@@ -94,6 +94,7 @@ export default function Collection() {
     (async () => {
       const { nfts } = await getNfts(walletAddress);
       console.log({ nfts });
+      console.log(nfts[0].imageUrl);
     })();
   }, [walletAddress]);
   
@@ -101,6 +102,7 @@ export default function Collection() {
     <>
     
     <Section title='OUR COLLECTION' id='collection'>
+     
       {/* <NftPuller /> */}
    
     <Fade cascade damping={0.1}>
@@ -112,7 +114,7 @@ export default function Collection() {
           transition: { duration: 0.2 }
         }}>
           <Image
-            src='/space1.jpg'
+            src={nfts[0]?.imageUrl}
             alt='collection'
            
             objectFit='cover'
