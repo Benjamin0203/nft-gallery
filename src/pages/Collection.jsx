@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { useNfts } from "@/hooks";
 import { getNfts } from "@/utils";
 
+const placeHolderImage = require('../../public/space1.jpg');
 
 const ImagesContainer = styled.div`
   display: flex;
@@ -81,9 +82,6 @@ const ImageContainer = ({ children, sm, alignEnd }) => {
   );
 };
 
-// const MotionImageContainer = motion(ImageContainer);
-// const TestImage = motion(Image)
-
 export default function Collection() {
   const [walletAddress, setWalletAddress] = useState(
     '0xe4bBCbFf51e61D0D95FcC5016609aC8354B177C4'
@@ -103,17 +101,21 @@ export default function Collection() {
     
     <Section title='OUR COLLECTION' id='collection'>
      
-      {/* <NftPuller /> */}
    
     <Fade cascade damping={0.1}>
-      {/* COL-1 */}
-
       <ImagesContainer mb='1.5rem' mbBreakpoint='1rem'>
       {
         nfts.map(nft => {
           return (
             <ImageContainer key={nft.id}>
-              <Image src={nft.imageUrl} alt={nft.name} layout='fill' />
+              <Image 
+              src={nft.imageUrl} 
+              alt={nft.name} 
+              fill 
+              onError={() => {
+                console.log('error happend when loading images');
+              }
+              }/>
             </ImageContainer>
           )
         })
