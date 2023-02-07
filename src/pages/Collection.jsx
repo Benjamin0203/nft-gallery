@@ -109,78 +109,15 @@ export default function Collection() {
       {/* COL-1 */}
 
       <ImagesContainer mb='1.5rem' mbBreakpoint='1rem'>
-        <ImageContainer whileHover={{
-          scale: 2,
-          transition: { duration: 0.2 }
-        }}>
-          <Image
-            src={nfts[0]?.imageUrl}
-            alt='collection'
-           
-            objectFit='cover'
-            layout='fill'
-            />
-        </ImageContainer>
-        <ImageContainer sm alignEnd>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-            objectFit='cover'
-            layout='fill'
-          />
-        </ImageContainer>
-        <ImageContainer>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-            objectFit='cover'
-            layout='fill'
-          />
-        </ImageContainer>
-        <ImageContainer sm alignEnd>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-            objectFit='cover'
-            layout='fill'
-          />
-        </ImageContainer>
-      </ImagesContainer>
-      {/* COL-2 */}
-
-      <ImagesContainer>
-        <ImageContainer sm>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-            objectFit='cover'
-            layout='fill'
-          />
-        </ImageContainer>
-        <ImageContainer>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-            objectFit='cover'
-            layout='fill'
-          />
-        </ImageContainer>
-        <ImageContainer sm>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-            objectFit='cover'
-            layout='fill'
-          />
-        </ImageContainer>
-        <ImageContainer>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-            objectFit='cover'
-            layout='fill'
-          />
-        </ImageContainer>
+      {
+        nfts.map(nft => {
+          return (
+            <ImageContainer key={nft.id}>
+              <Image src={nft.imageUrl} alt={nft.name} layout='fill' />
+            </ImageContainer>
+          )
+        })
+      }
       </ImagesContainer>
     </Fade>
 

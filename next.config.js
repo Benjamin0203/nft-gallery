@@ -5,7 +5,12 @@ const nextConfig = {
     newNextLinkBehavior: false,
   },
   images: {
-    domains: ['probably0.mypinata.cloud'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
 }
 
