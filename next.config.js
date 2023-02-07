@@ -4,6 +4,15 @@ const nextConfig = {
     appDir: 'src',
     newNextLinkBehavior: false,
   },
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig

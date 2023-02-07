@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { useNfts } from "@/hooks";
 import { getNfts } from "@/utils";
 
+const placeHolderImage = require('../../public/space1.jpg');
 
 const ImagesContainer = styled.div`
   display: flex;
@@ -81,9 +82,6 @@ const ImageContainer = ({ children, sm, alignEnd }) => {
   );
 };
 
-// const MotionImageContainer = motion(ImageContainer);
-// const TestImage = motion(Image)
-
 export default function Collection() {
   const [walletAddress, setWalletAddress] = useState(
     '0xe4bBCbFf51e61D0D95FcC5016609aC8354B177C4'
@@ -94,6 +92,7 @@ export default function Collection() {
     (async () => {
       const { nfts } = await getNfts(walletAddress);
       console.log({ nfts });
+      console.log(nfts[0].imageUrl);
     })();
   }, [walletAddress]);
   
@@ -101,84 +100,26 @@ export default function Collection() {
     <>
     
     <Section title='OUR COLLECTION' id='collection'>
-      {/* <NftPuller /> */}
+     
    
     <Fade cascade damping={0.1}>
-      {/* COL-1 */}
-
       <ImagesContainer mb='1.5rem' mbBreakpoint='1rem'>
-        <ImageContainer whileHover={{
-          scale: 2,
-          transition: { duration: 0.2 }
-        }}>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-           
-            objectFit='cover'
-            layout='fill'
-            />
-        </ImageContainer>
-        <ImageContainer sm alignEnd>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-            objectFit='cover'
-            layout='fill'
-          />
-        </ImageContainer>
-        <ImageContainer>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-            objectFit='cover'
-            layout='fill'
-          />
-        </ImageContainer>
-        <ImageContainer sm alignEnd>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-            objectFit='cover'
-            layout='fill'
-          />
-        </ImageContainer>
-      </ImagesContainer>
-      {/* COL-2 */}
-
-      <ImagesContainer>
-        <ImageContainer sm>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-            objectFit='cover'
-            layout='fill'
-          />
-        </ImageContainer>
-        <ImageContainer>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-            objectFit='cover'
-            layout='fill'
-          />
-        </ImageContainer>
-        <ImageContainer sm>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-            objectFit='cover'
-            layout='fill'
-          />
-        </ImageContainer>
-        <ImageContainer>
-          <Image
-            src='/space1.jpg'
-            alt='collection'
-            objectFit='cover'
-            layout='fill'
-          />
-        </ImageContainer>
+      {
+        nfts.map(nft => {
+          return (
+            <ImageContainer key={nft.id}>
+              <Image 
+              src={nft.imageUrl} 
+              alt={nft.name} 
+              fill 
+              onError={() => {
+                console.log('error happend when loading images');
+              }
+              }/>
+            </ImageContainer>
+          )
+        })
+      }
       </ImagesContainer>
     </Fade>
 
