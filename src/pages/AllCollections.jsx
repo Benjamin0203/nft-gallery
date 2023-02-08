@@ -47,8 +47,8 @@ const ImageOuter = styled.div`
 
 const ImageInner = styled.div`
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 60%;
   img {
     border-radius: 10px;
   }
@@ -115,8 +115,11 @@ const Input = styled.input`
 const AllCollections = () => {
 
   const [walletAddress, setWalletAddress] = useState(
-    "0xe4bBCbFf51e61D0D95FcC5016609aC8354B177C"
+    "0x50c43fB22155991d0c209f0973273523F9Ad6A94"
   );
+  //0x1fEE3385B22d69E93209dB2042BE58fcaC57B59b
+  
+  //https://www.robinwieruch.de/react-form/
   const passwordRef = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -142,8 +145,9 @@ const AllCollections = () => {
          <Label htmlFor="password1">Wallet Address</Label>
          <Input
          id='password1'
-         type='password'
+         type='text'
          ref={passwordRef}
+         placeholder='Enter your wallet address'
           />
          <Button type="submit">Submit</Button>
         </FormGroup>
