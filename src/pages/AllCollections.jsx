@@ -138,6 +138,23 @@ const AllCollections = () => {
     })();
   }, [walletAddress]);
 
+  if (loading) {
+    return (
+      <Section title="NFT Collections" id="allCollection">
+        <Paragraph>Loading...</Paragraph>
+      </Section>
+    );
+  }
+
+  if (error) {
+    return (
+      <Section title="NFT Collections" id="allCollection">
+        <Paragraph>Error: {error}</Paragraph>
+      </Section>
+    );
+  }
+    
+
   return (
     <>
       <Section title="NFT Collections" id="allCollection">
