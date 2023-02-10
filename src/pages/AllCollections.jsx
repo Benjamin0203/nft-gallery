@@ -5,11 +5,11 @@ import { useNfts } from "@/hooks";
 import { getNfts } from "@/utils";
 import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
-
+import { BiArrowBack } from "react-icons/bi";
 
 import ButtonGradient from "components/shared/ButtonGradient";
 import Section from "components/shared/Section";
-
+import SvgButton from "../../components/shared/SvgButton";
 
 const ImagesContainer = styled.div`
   display: flex;
@@ -82,6 +82,14 @@ const Button = styled(ButtonGradient)`
   height: 60px;
   padding: 0;
   margin-top: 1.5rem;
+`;
+
+const BackButton = styled.div`
+position: fixed;
+z-index: 3;
+bottom: 1.5rem;
+left: var(--padding-wrapper);
+display: flex;
 `;
 
 const FormGroup = styled.form`
@@ -158,6 +166,11 @@ const AllCollections = () => {
   return (
     <>
       <Section title="NFT Collections" id="allCollection">
+      {/* <BackButton>
+        <SvgButton>
+          <BiArrowBack size={20} />
+        </SvgButton>
+      </BackButton> */}
         <FormGroup onSubmit={handleSubmit}>
          <Label htmlFor="password1">Wallet Address</Label>
          <Input
