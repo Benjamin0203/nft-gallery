@@ -83,7 +83,7 @@ const NavMobileContainer = styled.nav`
   height: 100vh;
   top: 0;
   left: 0;
-  background: rgb(19, 15, 21);
+  background: #1a43a9;
   transition: transform ease-in-out 250ms;
   transform: ${(props) =>
     props.show ? "translateX(0%)" : "translateX(-100%)"};
@@ -124,7 +124,7 @@ const NavMobileBg = styled.div`
   right: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: #1a43a9;
   transition: all ease-in-out 250ms;
   transform: ${(props) => (props.show ? "translateX(0%)" : "translateX(100%)")};
 `;
@@ -165,7 +165,7 @@ const WalletContainer = styled.div`
   height: 100vh;
   top: 0;
   right: 0;
-  background: rgb(19, 15, 21);
+  background: #1a43a9;
   transition: transform ease-in-out 250ms;
   transform: ${(props) => (props.show ? "translateX(0%)" : "translateX(100%)")};
   overflow-y: auto;

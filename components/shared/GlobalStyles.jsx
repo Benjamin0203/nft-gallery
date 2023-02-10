@@ -7,15 +7,15 @@ export const GlobalStyles = createGlobalStyle`
   --color-black:#010101;
   --color-white:#fefdfd;
   --color-gray:#9296af;
-  --color-purple-100:#5f43b2;
-  --color-purple-200:#4c2c8c;
-  --color-purple-300:#3a1a6b;
-  --color-purple-400:#2a0e4f;
-  --color-purple-500:#1d0839;
-  --color-purple-600:#14062a;
-  --color-purple-700:#0e0420;
-  --color-purple-800:#0a0317;
-  --color-purple-900:#06020e;
+  --color-purple-100:#c0c7e9;
+  --color-purple-200:#96a4da;
+  --color-purple-300:#6b80ca;
+  --color-purple-400:#4a65be;
+  --color-purple-500:#224bb2;
+  --color-purple-600:#1a43a9;
+  --color-purple-700:#0b399d;
+  --color-purple-800:#002f91;
+  --color-purple-900:#001e7c;
 
   --color-pink-100: #cc00ff;
   --color-pink-200: #b300e6;
@@ -52,7 +52,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 body {
-    background: var(--color-black);
+    background: var(--color-offwhite);
     overflow-x: hidden;
 }
 

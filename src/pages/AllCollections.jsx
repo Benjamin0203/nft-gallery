@@ -173,7 +173,13 @@ const AllCollections = () => {
           {nfts.map((nft, i) => (
             <>
               <ImageContainer key={`${nft.contractAddress}/${nft.tokenId}`}>
-                <Image src={nft.imageUrl} alt={nft.name} fill />
+                <Image 
+                src={nft.imageUrl} 
+                alt={nft.name} 
+                fill
+                placeholder="blur"
+                blurDataURL="../../public/space1.jpg"
+                />
               </ImageContainer>
             </>
           ))}

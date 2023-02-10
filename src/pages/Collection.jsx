@@ -57,7 +57,7 @@ const Paragraph = styled.p`
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.6;
-  color: var(--color-gray);
+  color: var(--color-black);
   text-align: center;
   align-self: center;
   margin-top: 1.5rem;

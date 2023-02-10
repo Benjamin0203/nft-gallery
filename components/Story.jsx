@@ -37,7 +37,7 @@ const Title = styled.h2`
 `;
 
 const Paragraph = styled.p`
-  color: var(--color-white);
+  color: var(--color-black);
   margin-bottom: 1.4rem;
   line-height: 1.7;
 `;
@@ -51,7 +51,7 @@ export default function Story() {
         <Image src='/space2.jpg' width={280} height={280} style={{objectFit:'cover', layout:'fill'}} alt='bg' />
       </ImageContainer>
       <Box>
-        <Title>The Rise Of NFTs</Title>
+        <Title>Lorem</Title>
         <Paragraph>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nemo
           velit tenetur eligendi. Placeat, qui!
@@ -75,7 +75,7 @@ export default function Story() {
           voluptatibus itaque sunt accusamus velit totam eos quae consectetur
           maiores at tempora, praesentium pariatur, placeat ipsam adipisci
         </Paragraph>
-        <ButtonGradient>FIND US ON DISCORD</ButtonGradient>
+        <ButtonGradient>Learn more about us</ButtonGradient>
       </Box>
     </FlexWrap>
   )
