@@ -4,7 +4,7 @@ import {
   GradientCircleDark,
   GradientCircleTopLeft,
 } from "./shared/GradientCircles";
-import Navbar from "./Navbar";
+import Navbar from "./NavBar";
 import SvgButton from "./shared/SvgButton";
 import { FiSearch, FiArrowUp } from "react-icons/fi";
 import { useState } from "react";
