@@ -230,7 +230,7 @@ const Navbar = () => {
           <SvgButton onClick={() => setNavbarMobile(true)}>
             <FaBars size={20} />
           </SvgButton>
-          <Link href="#">
+          <Link href="/">
             <a className="logo">NFT Gallery</a>
           </Link>
         </LogoContainer>
@@ -252,6 +252,15 @@ const Navbar = () => {
           <FaTimes size={20} />
         </SvgButton>
         <NavMobileInner>
+          {/* LIST OF LINKS */}
+          <NavMobile>
+            <Links
+              col
+              justify="center"
+              align="center"
+              onClick={closeNavbarMobile}
+            />
+          </NavMobile>
           {/* BUTTON - LINKS */}
           <div>
             <Link href="https://opensea.io/" passHref={true} target="_blank">
@@ -262,7 +271,7 @@ const Navbar = () => {
                 <span>OPENSEA</span>
               </NavMobileBtn>
             </Link>
-         
+
             <Link href="https://discord.gg/opensea" passHref={true}>
               <NavMobileBtn as="a" onClick={closeNavbarMobile}>
                 <SvgButton>
@@ -272,15 +281,7 @@ const Navbar = () => {
               </NavMobileBtn>
             </Link>
           </div>
-          {/* LIST OF LINKS */}
-          <NavMobile>
-            <Links
-              col
-              justify="center"
-              align="center"
-              onClick={closeNavbarMobile}
-            />
-          </NavMobile>
+
           {/* MISC */}
           <div>
             <Paragraph>{`Copyright 2023 - Benjamin Meng `}</Paragraph>
@@ -288,14 +289,16 @@ const Navbar = () => {
               <Link href="https://github.com/Benjamin0203" passHref>
                 <IconContainer>
                   <AiFillGithub size={20} />
-                  </IconContainer>
+                </IconContainer>
               </Link>
-              <Link href="https://www.linkedin.com/in/benjaminmeng0203/" passHref>
+              <Link
+                href="https://www.linkedin.com/in/benjaminmeng0203/"
+                passHref
+              >
                 <IconContainer>
                   <FaLinkedin size={20} />
                 </IconContainer>
               </Link>
-           
             </IconBox>
           </div>
         </NavMobileInner>
