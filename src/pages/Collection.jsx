@@ -4,11 +4,12 @@ import Image from "next/image";
 import ButtonGradient from "../../components/shared/ButtonGradient";
 import Section from "../../components/shared/Section";
 import { Fade } from "react-awesome-reveal";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { useNfts } from "@/hooks";
 import { getNfts } from "@/utils";
+import Link from "next/link";
 
-const placeHolderImage = require('../../public/space1.jpg');
+const placeHolderImage = require("../../public/space1.jpg");
 
 const ImagesContainer = styled.div`
   display: flex;
@@ -56,7 +57,7 @@ const Paragraph = styled.p`
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.6;
-  color: var(--color-gray);
+  color: var(--color-black);
   text-align: center;
   align-self: center;
   margin-top: 1.5rem;
@@ -84,10 +85,10 @@ const ImageContainer = ({ children, sm, alignEnd }) => {
 
 export default function Collection() {
   const [walletAddress, setWalletAddress] = useState(
-    '0xe4bBCbFf51e61D0D95FcC5016609aC8354B177C4'
+    "0xe4bBCbFf51e61D0D95FcC5016609aC8354B177C4"
   );
   const { nfts, loading, error } = useNfts(walletAddress);
-  
+
   useEffect(() => {
     (async () => {
       const { nfts } = await getNfts(walletAddress);
@@ -95,42 +96,43 @@ export default function Collection() {
       console.log(nfts[0].imageUrl);
     })();
   }, [walletAddress]);
-  
+  //link to AllCollection.jsx page
   return (
     <>
-    
-    <Section title='OUR COLLECTION' id='collection'>
-     
-   
-    <Fade cascade damping={0.1}>
-      <ImagesContainer mb='1.5rem' mbBreakpoint='1rem'>
-      {
-        nfts.map(nft => {
-          return (
-            <ImageContainer key={nft.id}>
-              <Image 
-              src={nft.imageUrl} 
-              alt={nft.name} 
-              fill 
-              onError={() => {
-                console.log('error happend when loading images');
-              }
-              }/>
-            </ImageContainer>
-          )
-        })
-      }
-      </ImagesContainer>
-    </Fade>
+      <Section title="OUR COLLECTION" id="collection">
+        <Fade cascade damping={0.1}>
+          <ImagesContainer mb="1.5rem" mbBreakpoint="1rem">
+            {nfts.map((nft) => {
+              return (
+                <ImageContainer key={nft.id}>
+                  <Image
+                    src={nft.imageUrl}
+                    alt={nft.name}
+                    fill
+                    onError={() => {
+                      console.log("error happend when loading images");
+                    }}
+                  />
+                </ImageContainer>
+              );
+            })}
 
-    <Paragraph>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo veritatis
-      impedit repellendus magnam deleniti incidunt. Nulla temporibus
-      consequuntur nostrum. Fugiat!
-    </Paragraph>
-    <Button>SEE ALL</Button>
-  </Section>
-  </>
-  )
+            {error 
+            && <div>
+              <p>Error: {JSON.stringify(error, null, 2)}</p>              
+              </div>}
+          </ImagesContainer>
+        </Fade>
 
+        <Paragraph>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo
+          veritatis impedit repellendus magnam deleniti incidunt. Nulla
+          temporibus consequuntur nostrum. Fugiat!
+        </Paragraph>
+        <Link href="/AllCollections">
+          <Button>SEE ALL</Button>
+        </Link>
+      </Section>
+    </>
+  );
 }

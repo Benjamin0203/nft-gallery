@@ -83,7 +83,7 @@ const NavMobileContainer = styled.nav`
   height: 100vh;
   top: 0;
   left: 0;
-  background: rgb(19, 15, 21);
+  background: #1a43a9;
   transition: transform ease-in-out 250ms;
   transform: ${(props) =>
     props.show ? "translateX(0%)" : "translateX(-100%)"};
@@ -165,7 +165,7 @@ const WalletContainer = styled.div`
   height: 100vh;
   top: 0;
   right: 0;
-  background: rgb(19, 15, 21);
+  background: #1a43a9;
   transition: transform ease-in-out 250ms;
   transform: ${(props) => (props.show ? "translateX(0%)" : "translateX(100%)")};
   overflow-y: auto;
@@ -230,7 +230,7 @@ const Navbar = () => {
           <SvgButton onClick={() => setNavbarMobile(true)}>
             <FaBars size={20} />
           </SvgButton>
-          <Link href="#">
+          <Link href="/">
             <a className="logo">NFT Gallery</a>
           </Link>
         </LogoContainer>
@@ -252,6 +252,15 @@ const Navbar = () => {
           <FaTimes size={20} />
         </SvgButton>
         <NavMobileInner>
+          {/* LIST OF LINKS */}
+          <NavMobile>
+            <Links
+              col
+              justify="center"
+              align="center"
+              onClick={closeNavbarMobile}
+            />
+          </NavMobile>
           {/* BUTTON - LINKS */}
           <div>
             <Link href="https://opensea.io/" passHref={true} target="_blank">
@@ -262,7 +271,7 @@ const Navbar = () => {
                 <span>OPENSEA</span>
               </NavMobileBtn>
             </Link>
-         
+
             <Link href="https://discord.gg/opensea" passHref={true}>
               <NavMobileBtn as="a" onClick={closeNavbarMobile}>
                 <SvgButton>
@@ -272,15 +281,7 @@ const Navbar = () => {
               </NavMobileBtn>
             </Link>
           </div>
-          {/* LIST OF LINKS */}
-          <NavMobile>
-            <Links
-              col
-              justify="center"
-              align="center"
-              onClick={closeNavbarMobile}
-            />
-          </NavMobile>
+
           {/* MISC */}
           <div>
             <Paragraph>{`Copyright 2023 - Benjamin Meng `}</Paragraph>
@@ -288,14 +289,16 @@ const Navbar = () => {
               <Link href="https://github.com/Benjamin0203" passHref>
                 <IconContainer>
                   <AiFillGithub size={20} />
-                  </IconContainer>
+                </IconContainer>
               </Link>
-              <Link href="https://www.linkedin.com/in/benjaminmeng0203/" passHref>
+              <Link
+                href="https://www.linkedin.com/in/benjaminmeng0203/"
+                passHref
+              >
                 <IconContainer>
                   <FaLinkedin size={20} />
                 </IconContainer>
               </Link>
-           
             </IconBox>
           </div>
         </NavMobileInner>
@@ -316,11 +319,11 @@ const Navbar = () => {
             Connect with one of our available wallet providers or create a new
             one.
           </Paragraph>
-          <Link href="#">
+          <Link href="https://metamask.io/" passHref>
             <NavMobileBtn as="a" onClick={() => setWallet(false)}>
               <SvgButton>
                 <Image
-                  src="/metamask.svg"
+                  src="/metamask.png"
                   width={40}
                   height={40}
                   objectFit="contain"
@@ -330,11 +333,25 @@ const Navbar = () => {
               <span>METAMASK</span>
             </NavMobileBtn>
           </Link>
-          <Link href="#">
+          <Link href="https://metamask.io/" passHref>
             <NavMobileBtn as="a" onClick={() => setWallet(false)}>
               <SvgButton>
                 <Image
-                  src="/coinbase.svg"
+                  src="/metamask.png"
+                  width={40}
+                  height={40}
+                  objectFit="contain"
+                  alt=""
+                />
+              </SvgButton>
+              <span>METAMASK</span>
+            </NavMobileBtn>
+          </Link>
+          {/* <Link href="#">
+            <NavMobileBtn as="a" onClick={() => setWallet(false)}>
+              <SvgButton>
+                <Image
+                  src="/coinbase.png"
                   width={80}
                   height={80}
                   objectFit="cover"
@@ -343,12 +360,12 @@ const Navbar = () => {
               </SvgButton>
               <span>COINBASE</span>
             </NavMobileBtn>
-          </Link>
-          <Link href="#">
+          </Link> */}
+          {/* <Link href="#">
             <NavMobileBtn as="a" onClick={() => setWallet(false)}>
               <SvgButton>
                 <Image
-                  src="/walletconnect.svg"
+                  src="/walletconnect.png"
                   width={80}
                   height={80}
                   objectFit="cover"
@@ -357,7 +374,7 @@ const Navbar = () => {
               </SvgButton>
               <span>WALLETCONNECT</span>
             </NavMobileBtn>
-          </Link>
+          </Link> */}
         </WalletInner>
       </WalletContainer>
       <WalletBg show={wallet} onClick={() => setWallet(false)} />
