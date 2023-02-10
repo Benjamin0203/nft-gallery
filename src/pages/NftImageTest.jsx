@@ -3,7 +3,7 @@
 const NftImageTest = () => {
   return (
     <div>
-      nothing
+      nothing to add
     </div>
   );
 }
